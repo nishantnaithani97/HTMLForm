@@ -2,7 +2,7 @@
     <head>
         <!doctype html>
         <meta charset="utf-8">
-        <meta name="viewport" content="width= device - width,initial-scale = 1, shrink -to-fit = no">
+        <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <title>2nd Day at Successive Softwares</title>
         <style>
@@ -20,49 +20,61 @@
             input[type="number"]{
                 width:100%;
             }
-            input[type="submit"]{
+            button
+            {
                 width: 25%;
             }
         </style>
+        <script>
+            function display(){
+                var firstName = document.forms["myform"]["ufrstname"].value;
+                var lastName = document.forms["myform"]["ulstname"].value;
+                var gender = document.forms["myform"]["ugender"].value;
+                var email = document.forms["myform"]["uemail"].value;
+                var contact = document.forms["myform"]["ucntct"].value;
+                console.log(firstName);
+                console.log(lastName);
+                console.log(gender);
+                console.log(email);
+                console.log(contact);
+                return false;
+            }
+        </script>
     </head>
     <body>
         <h1>
             <b><center>Registration Form</center></b>
         </h1>
+        <form name="myform" method="POST" onsubmit="display()">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                        <input type="text" name="ufrstname" placeholder="Enter your first name.">
-                      </div>
-                      <div class="col-sm-6">
-                        <input type="text" name="Ulstname" placeholder="Enter your last name.">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                      <center> Male <input type="radio" name="ugender" value="Male"> Female <input type="radio" name="ugender" value="Female"></center>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <input type="email" name="uemail" placeholder="How to get connected to you electronically." >
-                      </div>
-                      <div class="col-sm-6">
-                        <input type="number" name="ucntct" placeholder="How to get connected to you offline" maxlength="11">
-                      </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <input type="text" name="uaddress" placeholder="Enter your address here.">
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-sm-12">
-                                <input type="submit" name="usbt" value="submit">
-                            </div>
-                        </div>
-                  </div>
-
+                    <input type="text" name="ufrstname" placeholder="Enter your first name.">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="ulstname" placeholder="Enter your last name.">
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                    <center> Male <input type="radio" name="ugender" value="Male"> Female <input type="radio" name="ugender" value="Female"></center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="email" name="uemail" placeholder="How to get connected to you electronically." >
+                </div>
+                <div class="col-sm-6">
+                    <input type="number" name="ucntct" placeholder="How to get connected to you offline" maxlength="11">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="submit" name="usbt" value="submit">
+                </div>
+            </div>
+        </div>
+        </form>
     </body>
 
 </html>
