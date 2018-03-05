@@ -1,0 +1,55 @@
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <script>
+                let i;
+                let dropDown = ['A', 'B','C','D','E'];
+                function add(){
+                    let x = document.getElementById('add').value;
+                    dropDown.push(x);
+                    dropDown.forEach(function(item,index,array){console.log(item)});
+                    return false;
+                }
+                function remove(){
+                    let y = document.getElementById('remove').value;
+                    let pos = dropDown.indexOf(y);
+                    let last = dropDown.splice(pos,1);
+                    dropDown.forEach(function(item,index,array){console.log(item)});
+                    return false;
+                }
+                let select = document.getElementById('drop');
+                for(var i = 0; i < dropDown.length; i++) {
+                var opt = dropDown[i];
+                select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+                }
+            </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Task 1</h1>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-12">
+                    <center>
+                    <select id="drop">
+
+                    </select>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" name="inputText" id="add"><button onclick="add()">Add Element</button>
+                </div>
+                <div class="col-6">
+                    <input type="text" name="delText" id="remove"><button onclick="remove()">Delete Element</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
