@@ -19,11 +19,7 @@
                     dropDown.forEach(function(item,index,array){console.log(item)});
                     return false;
                 }
-                let select = document.getElementById('drop');
-                for(var i = 0; i < dropDown.length; i++) {
-                var opt = dropDown[i];
-                select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
-                }
+                let dropele = document.getElementById('drop');
             </script>
     </head>
     <body>
@@ -37,7 +33,14 @@
                 <div class="col-12">
                     <center>
                     <select id="drop">
-
+                        <option>Drop Down Array</option>
+                        <script>
+                            function display(){
+                                for( i = 0; i < dropDown.length; i++){
+                                    document.write("<option value = \"" + dropDown[i] + "\">" + dropDown[i] + "</option>");
+                                }
+                            }
+                        </script>
                     </select>
                     </center>
                 </div>
