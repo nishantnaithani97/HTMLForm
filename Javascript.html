@@ -1,7 +1,38 @@
 <html>
     <head>
+        <!doctype html>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script>
+            class student{
+                constructor(name, age, rollNo, section){
+                    this.name = name;
+                    this.age = age;
+                    this.rollNo = rollNo;
+                    this.section = section;
+                }
+                showDetails(){
+                    console.log(this.name + ' is of ' + this.age + ' years old and ' + this.rollNo + ' roll number from ' + this.section) + ' section.';
+                }
+            }
+            class marks extends student{
+                constructor(name, section, eng, hindi, maths, sci, socialStu){
+                    super(name, section);
+                    this.eng = eng;
+                    this.hindi = hindi;
+                    this.maths = maths;
+                    this.sci = sci;
+                    this.socialStu =socialStu;
+                }
+                showMarks(){
+                    console.log(this.name + ' of '+ this.section + ' got marks as: English = ' + this.eng + ' Hindi = ' + this.hindi + ' Mathematics = ' + this.maths + ' Science = ' + this.sci + ' and Social Studies = ' + this.socialStu)
+                }
+            }
+            let stud1 = new student('Nishant Naithani', 21, 4065, 'B. Tech CSE');
+            let mark1 = new marks('Nishant Naithani', 'B. Tech CSE', 48, 47, 49, 50, 36);
+            stud1.showDetails();       
+            mark1.showMarks();
+        </script>
     </head>
 </html>
